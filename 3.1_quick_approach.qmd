@@ -1,14 +1,16 @@
 ---
-title: "Quick approach"
 from: markdown+emoji
 code-annotations: hover
 ---
+
+
+# Quick approach
 
 <img align="right" src="/images/r5r_logo.png?raw=true" alt="logo" width="140"> 
 **In this first hands-on section of the workshop, we'll learn a very quick and simple way to calculate spatial accessibility using the `{r5r}` package**. In the next section, we'll see a more flexible and robust way to do the same thing. Here we'll be calculating the number of schools accessible by public transport within a travel time of 20 minutes.
 
 
-### 1. Allocating memory to Java & loading packages
+## Allocating memory to Java & loading packages
 
 First, let's increase the memory available to run Java, which is used by the underlying R5 routing engine. To increase the available memory to 2 GB, for example, we use the following command. Note that this needs to be run ***before*** loading the packages that will be used in our analysis.
 
@@ -27,7 +29,7 @@ library(ggplot2)
 ```
 
 
-# 2. A quick look at our sample data
+## A quick look at our sample data
 
 Our case study is the city of Porto Alegre, Brazil. The `{r5r}` package brings a small sample data for this city, including the following files:
 
@@ -70,7 +72,7 @@ mapview(grid_poa, zcol = 'population')
 
 
 
-# 3. Building a routable transport network
+## Building a routable transport network
 
 This quick approach to calculate accessibility involves only 2 steps. The first step is to build the multimodal transport network using the `r5r::setup_r5()` function.
 
@@ -84,7 +86,7 @@ As you can see, we only need to pass the path to our data directory to the `r5r:
 
 
 
-# 4. Calculating access: quick approach 
+## Calculating access: quick approach 
 
 In the second step, you can calculate accessibility estimates in a single call using the `r5r::accessibility()` function. It includes different options of decay functions to compute cumulative accessibility measures and different gravity-based metrics.
 
@@ -136,7 +138,7 @@ head(access1)
 
 ```
 
-# 5. Accessibility map
+## Accessibility map
 
 Now it is super simple to merge these accessibility estimates to our spatial grid to visualize these results on a map.
 

@@ -1,6 +1,8 @@
 ---
-title: "Data requirements"
+from: markdown+emoji
 ---
+
+# Data requirements
 
 In order to conduct transport routing and accessibility analysis using the `{r5r}` package, you will need a few input data sets:
 
@@ -12,6 +14,8 @@ In order to conduct transport routing and accessibility analysis using the `{r5r
 
 The data sets we'll use in this workshop are provided with the code exercises. If you would like to find similar data for you other regions in the world, here are a few data sources. See also slides below.
 
+## Street network
+
 - **Street network** (mandatory):
   - [{osmextract}](https://docs.ropensci.org/osmextract/), R package;
   - [Geofabrik](https://download.geofabrik.de/), website;
@@ -19,10 +23,14 @@ The data sets we'll use in this workshop are provided with the code exercises. I
   - [BBBike Extract Service](https://extract.bbbike.org/), website.
   - [Protomaps](https://protomaps.com/downloads/osm) website
 
+## Public transport network
+
 - **Public transport network** (optional):
   - [{tidytransit}](https://r-transit.github.io/tidytransit/), R package;
   - [Transitland](https://www.transit.land/), website;
   - [Mobility Database](https://database.mobilitydata.org/) website
+
+## Topography
 
 - **Topography** (optional):
   - [{elevatr}](https://github.com/jhollist/elevatr), R package;

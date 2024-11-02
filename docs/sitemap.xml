@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ipeagit.github.io/access_workshop_bogota_2024/3.1_quick_approach.html</loc>
-    <lastmod>2024-06-15T14:53:33.007Z</lastmod>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/index.html</loc>
+    <lastmod>2024-11-02T02:37:09.373Z</lastmod>
   </url>
   <url>
-    <loc>https://ipeagit.github.io/access_workshop_bogota_2024/index.html</loc>
-    <lastmod>2024-06-15T13:00:53.281Z</lastmod>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/2.1_installation.html</loc>
+    <lastmod>2024-11-02T02:26:28.196Z</lastmod>
   </url>
   <url>
-    <loc>https://ipeagit.github.io/access_workshop_bogota_2024/3.2_flexible_approach.html</loc>
-    <lastmod>2024-06-15T20:48:14.858Z</lastmod>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/2.2_data_requirements.html</loc>
+    <lastmod>2024-11-02T02:27:07.032Z</lastmod>
   </url>
   <url>
-    <loc>https://ipeagit.github.io/access_workshop_bogota_2024/2.1_installation.html</loc>
-    <lastmod>2024-08-27T12:06:21.248Z</lastmod>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/3.1_quick_approach.html</loc>
+    <lastmod>2024-11-02T02:28:53.079Z</lastmod>
   </url>
   <url>
-    <loc>https://ipeagit.github.io/access_workshop_bogota_2024/2.1_installation.knit.html</loc>
-    <lastmod>2024-06-16T23:31:48.971Z</lastmod>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/3.2_flexible_approach.html</loc>
+    <lastmod>2024-11-02T02:28:20.356Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/3.3_equity_measures.html</loc>
+    <lastmod>2024-11-02T02:27:26.477Z</lastmod>
   </url>
 </urlset>

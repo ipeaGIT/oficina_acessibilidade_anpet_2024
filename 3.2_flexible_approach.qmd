@@ -1,8 +1,10 @@
 ---
-title: "Flexible approach"
-code-annotations: hover
 from: markdown+emoji
+code-annotations: hover
 ---
+
+
+# Flexible approach
 
 In the the previous section, we learned a 'quick approach' to calculate accessibility directly from within `{r5r}`. A shortcoming of this approach is that it is limited to only a few predefined accessibility metrics available in `{r5r}`. Oftentimes, we want to analyze other types of accessibility metrics and/or to have more control of the different steps of the analysis.
 
@@ -35,7 +37,7 @@ library(ggplot2)
 ```
 
 
-# 1. Building a routable transport network
+## Building a routable transport network
 
 First, we build the multimodal transport network by passing the path of our data directory to the `r5r::setup_r5()` function.
 
@@ -49,7 +51,7 @@ r5r_core <- r5r::setup_r5(data_path,
 
 ```
 
-# 2. Computing a travel time matrix
+## Computing a travel time matrix
 
 The second step is to calculate a travel time matrix with door-to-door travel time estimates from all origins to all destinations. To do this, we use the `r5r::travel_time_matrix()` function.
 
@@ -99,7 +101,7 @@ The `travel_time_matrix()` function uses an extension of the RAPTOR routing algo
 :::
 
 
-# 3. Calculating accessibility 
+## Calculating accessibility 
 
 <img align="right" src="/images/accessibility_logo.png" alt="logo" width="140"> 
 
@@ -127,9 +129,9 @@ head(points)                # <1>
 Now let's calculate a few accessibility indicators.
 
 
-## 3.1 Cumulative accessibility measure
+### Cumulative accessibility measure
 
-### Threshold-based cumulative accessibility
+#### Threshold-based cumulative accessibility
 
 To calculate a traditional cumulative accessibility measure, we can use the `accessibility::cumulative_cutoff()` function. Along with the travel matrix and land use data sets, we only need to pass the name of the column with the travel time values, the name of the column with the count of opportunities, and a travel time cutoff. 
 
@@ -148,7 +150,7 @@ access_cum_t <- accessibility::cumulative_cutoff(
 head(access_cum_t)
 
 ```
-### Interval-based cumulative accessibility
+#### Interval-based cumulative accessibility
 
 Previous studies have shown that the *ad-hoc* choice of a single travel time threshold can substantially influence the results of traditional cumulative accessibility measures, introducing bias into transport project evaluations and equity analyses [@pereira2019future]. To overcome this issue, we have proposed a *time interval* cumulative accessibility measure [@tomasiello2023time]. This new metric estimates the average (or the median) number of opportunities that can be reached considering multiple minute-by-minute cutoffs within a given travel time interval. 
 
@@ -182,7 +184,7 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 
 
 
-## 3.2 Gravity-based accessibility measures
+### Gravity-based accessibility measures
 
 The package also includes `accessibility::gravity()` to calculate gravity-based accessibility metrics in a very flexible way.
 
@@ -250,7 +252,7 @@ ggplot(weights) +
   theme_minimal()
 ```
 
-# 5. Accessibility map
+## Accessibility map
 
 Now it is super simple to merge all of these accessibility estimates to our spatial grid to visualize these results on a map.
 

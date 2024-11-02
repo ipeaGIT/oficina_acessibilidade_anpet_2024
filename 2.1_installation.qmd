@@ -1,7 +1,9 @@
 ---
-title: "Installation"
 from: markdown+emoji
 ---
+
+# Instalação
+
 
 ::: {.callout-important appearance="simple"}
 To follow the workshop, you should have the following programs installed on your machine ***before*** the day of the workshop.
@@ -13,13 +15,13 @@ To follow the workshop, you should have the following programs installed on your
 See instructions below:
 :::
 
-# Installing R and RStudio
+## Installing R and RStudio
 
 We assume you already have R and RStudio installed on your machine. In case you don't, [follow these simple instructions here](https://posit.co/download/rstudio-desktop/#download).
 
 
 
-# Installing R packages
+## Installing R packages
 
 The workshop uses a few R packages that need to be installed on your machine. The simplest way to do this is running the code below. This might take a few minutes if this is the first time you install these packages.
 
@@ -49,7 +51,7 @@ renv::restore()
 
 
 
-# Installing Java
+## Installing Java
 
 To use the `{r5r}` package (version v2.0 or higher), you will need to have *Java Development Kit (JDK) 21* installed on your computer. There are numerous open-source JDK implementations. The easiest way to install JDK is using the new [{rJavaEnv}](https://www.ekotov.pro/rJavaEnv/) package in R, developed by Egor Kotov (thanks Egor!).
 

@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.4.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -89,7 +89,7 @@
       "Package": "Matrix",
       "Version": "1.6-4",
       "Source": "Repository",
-      "Repository": "https://packagemanager.posit.co/cran/2023-12-06",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "grDevices",
