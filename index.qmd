@@ -7,7 +7,7 @@ Este site apresenta o material de apoio para a oficina **"Um Curso Prático de A
 
 # Resumo da Oficina:
 
-As análises de roteamento e acessibilidade são cada vez mais utilizadas em nas áreas de pesquisa e planejamento urbano e de transporte. Nesta oficina, você aprenderá a estimar matrizes de tempo de viagem e a realizar análises de acessibilidade em redes de transporte multimodais usando os pacotes [{r5r}](https://ipeagit.github.io/r5r/) e [{accessibility}](https://ipeagit.github.io/accessibility/) na linguagem de programação `R`.
+As análises de roteamento e acessibilidade são cada vez mais utilizadas em nas áreas de pesquisa e planejamento urbano e de transporte. Nesta oficina, você aprenderá a estimar matrizes de tempo de viagem e a realizar análises de acessibilidade em redes de transporte multimodais usando os pacotes [{r5r}](https://ipeagit.github.io/r5r/) e [{accessibility}](https://ipeagit.github.io/accessibility/) na linguagem de programação `R`. Você também vai aprender a baixar os dados do Projeto Acesso a Oportunidades (AOP) usando o pacote [{aopdata}](https://ipeagit.github.io/aopdata/).
 
 O workshop também ilustrará como calcular diferentes medidas de *desigualdade* de acesso a oportunidades e *pobreza* de acessibilidade, aspectos cruciais para avaliar os impactos de acessibilidade de projetos de transporte sob uma perspectiva de equidade. O curso é baseado no livro [“Introdução à acessibilidade urbana: um guia prático em R”](https://ipeagit.github.io/intro_access_book/) [@pereira2023introduction].
 
