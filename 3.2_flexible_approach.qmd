@@ -4,7 +4,7 @@ code-annotations: hover
 ---
 
 
-# Flexible approach
+# Aborgadem flexivel
 
 In the the previous section, we learned a 'quick approach' to calculate accessibility directly from within `{r5r}`. A shortcoming of this approach is that it is limited to only a few predefined accessibility metrics available in `{r5r}`. Oftentimes, we want to analyze other types of accessibility metrics and/or to have more control of the different steps of the analysis.
 

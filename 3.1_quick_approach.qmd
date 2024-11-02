@@ -4,7 +4,7 @@ code-annotations: hover
 ---
 
 
-# Quick approach
+# Aborgadem rápida
 
 <img align="right" src="/images/r5r_logo.png?raw=true" alt="logo" width="140"> 
 **In this first hands-on section of the workshop, we'll learn a very quick and simple way to calculate spatial accessibility using the `{r5r}` package**. In the next section, we'll see a more flexible and robust way to do the same thing. Here we'll be calculating the number of schools accessible by public transport within a travel time of 20 minutes.
