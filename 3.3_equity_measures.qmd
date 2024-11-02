@@ -4,19 +4,19 @@ code-annotations: hover
 ---
 
 
-# Equity measures
+# Medidas de equidade
 
-A central question in transportation research and practice involves assessing how the accessibility benefits of transportation systems and projects are distributed across different socioeconomic and demographic groups. Transportation equity concerns are fundamentally related to two types of issues: (1) accessibility inequality and (2) accessibility poverty. **In this section you will learn how to use the `{accessibility}` package to calculate different indicators of accessibility inequality and poverty.**
+Uma questão central na pesquisa e prática em transporte envolve avaliar como os benefícios de acessibilidade dos sistemas e projetos de transporte são distribuídos entre diferentes grupos socioeconômicos e demográficos. As preocupações com a equidade no transporte estão fundamentalmente relacionadas a dois tipos de questões: (1) desigualdade de acessibilidade e (2) pobreza de acessibilidade. **Nesta seção, você aprenderá a usar o pacote `{accessibility}` para calcular diferentes indicadores de desigualdade e pobreza de acessibilidade.**
 <img align="right" src="/images/accessibility_logo.png?raw=true" alt="logo" width="140">
 
-In a recent paper, we discussed the advantages and disadvantages of various inequality and poverty metrics most commonly used in the transport literature [@karner2024advances] - ungated PDF [here](https://www.urbandemographics.org/publication/2024_transp_measuring_transportation_equity/). The slides below give a *very* short summary of some ideas discussed in the paper. Just enough to follow this workshop section. Nonetheless, I would strongly recommend reading the whole paper.
+Em um artigo recente, discutimos as vantagens e desvantagens de várias métricas de desigualdade e pobreza mais comumente usadas na literatura de transporte [@karner2024advances] - PDF aberto [aqui](https://www.urbandemographics.org/publication/2024_transp_measuring_transportation_equity/). Os slides abaixo fornecem um *resumo muito breve* de algumas ideias discutidas no artigo, apenas o suficiente para acompanhar esta seção do workshop. No entanto, recomendo fortemente a leitura completa do artigo.
 
  
 <!-- Slides -->
 <p><embed src="slides/3.3_equity_metrics.pdf" style="width:100.0%;height:100vh;" /></p>
 
+Nesta seção, usaremos alguns conjuntos de dados de exemplo para a cidade de Belo Horizonte (Brasil), que acompanham o pacote `{accessibility}`. No bloco de código abaixo, lemos a matriz de tempo de viagem e os dados de uso do solo e calculamos o número médio de empregos acessíveis em 30 minutos por transporte público.
 
-In this section, we'll be using a couple sample data sets for the city of Belo Horizonte (Brazil), which come with the `{accessibility}` package. In the code chunk below, we read the travel time matrix and land use data, and calculate the average number of jobs accessible in 30 by public transport.
 
 ```{r, message=FALSE}
 library(accessibility)
@@ -42,7 +42,7 @@ access_df <- cumulative_cutoff(
 head(access_df)
 ```
 
-:mag_right: Time for a quick visual inspection! We can merge our accessibility results with the land use/population data, and visualize how employment accessibility is distributed across different income groups.
+:mag_right: Hora de uma inspeção visual rápida! Podemos unir nossos resultados de acessibilidade com os dados de uso do solo/população e visualizar como a acessibilidade ao emprego é distribuída entre diferentes grupos de renda.
 
 ```{r}
 # merge acces and land use data
@@ -61,27 +61,27 @@ ggplot(data = df) +
                    weight = population, 
                    color = income_decile)) +
   scale_colour_brewer(palette = 'RdBu') + 
-  labs(subtitle = 'Number of jobs accessible in 30 minutes by public transport',
-       x = 'Income decile', y = 'Jobs (in thousands)') +
-  scale_x_discrete(labels = c("D1\npoorest", 
+  labs(subtitle = 'Número de empregos acessíveis em 30 minutos por transporte público',
+       x = 'Decis de renda', y = 'Empregos (em milhares)') +
+  scale_x_discrete(labels = c("D1\npobres", 
                               paste0("D", 2:9), 
-                              "D10\nwealthiest")) +
+                              "D10\nricos")) +
   theme_minimal()
 ```
 
-The box plot shows a very uneven distribution of access to job opportunities. Now let's check what we can learn about accessibility inequality and poverty in this region with a few examples.
+O box plot mostra uma distribuição muito desigual de acesso a oportunidades de emprego. Agora vamos ver o que podemos aprender sobre desigualdade e pobreza de acessibilidade nesta região com alguns indicadores
 
 ::: {.callout-tip appearance="simple"}
-A detailed explanation of all inequality and poverty measures covered in `{accessibility}` are available in the [package documentation](https://ipeagit.github.io/accessibility/articles/inequality_and_poverty.html).
+Uma explicação detalhada de todas as medidas de desigualdade e pobreza abordadas no `{accessibility}` está disponível na [documentação do pacote](https://ipeagit.github.io/accessibility/articles/inequality_and_poverty.html).
 :::
 
-# Inequality measures
+# Medidas de desigualdade
 
-## Palma ratio
+## Razão de Palma
 
-The Palma ratio is calculated as the average access of the richest 10% divided by the average access of the poorest 40%. Palma Ratio values higher than 1 indicate that the wealthiest population has higher accessibility levels than the poorest, whereas values lower than 1 indicate the opposite situation.
+A razão de Palma é calculada como a acessibilidade média dos 10% mais ricos dividida pela acessibilidade média dos 40% mais pobres. Valores do Índice de Palma maiores que 1 indicam que a população mais rica tem níveis de acessibilidade mais altos do que a população mais pobre, enquanto valores menores que 1 indicam a situação oposta.
 
-In the example here, we see that the wealthiest population can access on average 3.8 times more jobs than the poor population.
+No exemplo aqui, vemos que a população mais rica pode acessar, em média, 3,8 vezes mais empregos do que a população pobre.
 
 ```{r}
 palma <- palma_ratio(
@@ -94,9 +94,14 @@ palma <- palma_ratio(
 
 palma
 ```
-## Concentration index
 
-The concentration index (CI) estimates the extent to which accessibility inequalities are systematically associated with individuals’ socioeconomic levels. CI values can theoretically vary between -1 and 1 (when all accessibility is concentrated in the most or in the least disadvantaged person, respectively). Negative values indicate that inequalities favor the poor, while positive values indicate a pro-rich bias.
+## ~~Índice de Gini~~
+
+Provavelmente, você não deveria estar usando o índice de Gini para medir desigualdade de acessibilidade ;) [veja @karner2024advances].
+
+## Índice de concentração
+
+O índice de concentração (CI) estima a extensão em que as desigualdades de acessibilidade estão sistematicamente associadas aos níveis socioeconômicos dos indivíduos. Os valores do CI podem variar teoricamente entre -1 e 1 (quando toda a acessibilidade está concentrada na pessoa mais ou menos favorecida, respectivamente). Valores negativos indicam que as desigualdades favorecem os pobres, enquanto valores positivos indicam um viés pró-rico.
 
 ```{r}
 ci <- accessibility::concentration_index(
@@ -110,27 +115,23 @@ ci <- accessibility::concentration_index(
 
 ci
 ```
-## ~~Gini index~~
 
-You probably shouldn't use the Gini index to measure accessibility inequality [see @karner2024advances].
+# Medidas de pobreza
 
-# Accessibility poverty
+## Medidas de pobreza Foster-Greer-Thorbecke (FGT) 
 
-## Foster-Greer-Thorbecke (FGT) poverty measures 
+A função `fgt_poverty()` calcula as métricas FGT, uma família de medidas de pobreza originalmente proposta por @foster1984class, e que pode ser usada para captar a extensão e a gravidade da pobreza de uma distribuição de acessibilidade. A família FGT é composta por três medidas:
 
-The `fgt_poverty()` function calculates the FGT metrics, a family of poverty measures originally proposed by @foster1984class, and which that can be used to capture the extent and severity of poverty within an accessibility distribution. The FGT family is composed of three measures:
+- FGT0: captura a extensão da pobreza como uma simples contagem - ou seja, a proporção de pessoas abaixo da linha de pobreza;
+- FGT1: também conhecido como "índice de gap de pobreza", captura a gravidade da pobreza como a distância percentual média entre a linha de pobreza e a acessibilidade dos indivíduos abaixo dessa linha;
+- FGT2: simultaneamente capta a extensão e a gravidade da pobreza, calculando o número de pessoas abaixo da linha de pobreza ponderado pelo tamanho do déficit de acessibilidade em relação à linha de pobreza.
 
-- FGT0: it captures the extent of poverty as a simple headcount - i.e. the proportion of people below the poverty line;
-- FGT1: also know as the "poverty gap index", it captures the severity of poverty as the average percentage distance between the poverty line and the accessibility of individuals below the poverty line;
-- FGT2: it simultaneously captures the extent and the severity of poverty by calculating the number of people below the poverty line weighted by the size of the accessibility shortfall relative to the poverty line.
-
-This function includes an additional `poverty_line` parameter, used to define
-the poverty line below which individuals are considered to be in accessibility
-poverty. For the sake of this exercise, we'll consider the lowest 25th percentile of access as our poverty line, which in this example is approximately 23 thousand jobs.
+Essa função inclui um parâmetro adicional `poverty_line`, usado para definir a linha de pobreza abaixo da qual os indivíduos são considerados em situação de pobreza de acessibilidade. Para o propósito deste exercício, consideraremos o percentil mais baixo de 25% de acesso como nossa linha de pobreza, que neste exemplo é aproximadamente 23 mil empregos.
 
 ::: {.callout-important appearance="simple"}
-Quick reminder that the definition of an accessibility poverty line is ultimately a moral and political decision and not simply an empirical or technical question [@pereira2017distributive; @lucas2019measuring].
+Lembrete rápido de que a definição de uma linha de pobreza de acessibilidade é, em última análise, uma decisão moral e política e não simplesmente uma questão empírica ou técnica [@pereira2017distributive; @lucas2019measuring].
 :::
+
 
 ```{r}
 # get the 25th percentile of access
@@ -147,9 +148,9 @@ poverty <- fgt_poverty(
 poverty
 ```
 
-Quick interpretation:
+Interpretação rápida:
 
-- FGT0: 14.8% of the population are in accessibility poverty
-- FGT1: the accessibility of those living in accessibility poverty is on average 5% lower than the poverty line
-- FGT2: it has no clear interpretation, but one could say that the overall poverty level/intensity is 2.8%.
+- FGT0: 14,8% da população está em situação de pobreza de acessibilidade
+- FGT1: a acessibilidade daqueles em situação de pobreza de acessibilidade é, em média, 5% menor que a linha de pobreza
+- FGT2: não possui uma interpretação direta, mas pode-se dizer que o nível/intensidade geral de pobreza é de 2,8%.
 

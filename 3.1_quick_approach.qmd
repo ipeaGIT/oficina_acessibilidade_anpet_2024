@@ -7,18 +7,19 @@ code-annotations: hover
 # Aborgadem rápida
 
 <img align="right" src="/images/r5r_logo.png?raw=true" alt="logo" width="140"> 
-**In this first hands-on section of the workshop, we'll learn a very quick and simple way to calculate spatial accessibility using the `{r5r}` package**. In the next section, we'll see a more flexible and robust way to do the same thing. Here we'll be calculating the number of schools accessible by public transport within a travel time of 20 minutes.
+**Nesta primeira seção prática da oficina, aprenderemos uma maneira rápida e simples de calcular a acessibilidade espacial usando o pacote `{r5r}`**. Na próxima seção, veremos uma maneira mais flexível e robusta de fazer a mesma coisa.
 
+Aqui, nós vamos calcular o número de escolas acessíveis por transporte público em um tempo de viagem de até 20 minutos.
 
-## Allocating memory to Java & loading packages
+### Alocando memória para o Java e carregando pacotes
 
-First, let's increase the memory available to run Java, which is used by the underlying R5 routing engine. To increase the available memory to 2 GB, for example, we use the following command. Note that this needs to be run ***before*** loading the packages that will be used in our analysis.
+Primeiro, vamos aumentar a memória disponível para executar o Java, que é usado pelo programa roteamento R5. Para aumentar a memória disponível para 4 GB, por exemplo, usamos o seguinte comando. Observe que isso precisa ser executado ***antes*** de carregar os pacotes que serão usados em nossa análise.
 
 ```{r}
-options(java.parameters = "-Xmx2G")
+options(java.parameters = "-Xmx4G")
 ```
 
-Now we can load the packages we'll use in this section:
+Agora podemos carregar os pacotes que usaremos nesta seção:
 
 ```{r, message=FALSE}
 library(r5r)
@@ -29,16 +30,16 @@ library(ggplot2)
 ```
 
 
-## A quick look at our sample data
+## Uma visão rápida dos nossos dados de exemplo
 
-Our case study is the city of Porto Alegre, Brazil. The `{r5r}` package brings a small sample data for this city, including the following files:
+Nosso estudo de caso é a cidade de Porto Alegre, Brasil. O pacote `{r5r}` traz uma pequena amostra de dados para esta cidade, incluindo os seguintes arquivos:
 
-- An OpenStreetMap network: `poa_osm.pbf`
-- Two public transport GTFS feeds: `poa_eptc.zip` (buses) and `poa_trensurb.zip` (trains)
-- A raster elevation data: `poa_elevation.tif`
-- A data frame with land use data: `poa_hexgrid.csv` file with the centroids of a regular hexagonal grid covering the sample area. The data frame also indicates the number of residents and schools in each cell. We'll use these points as origins and destinations in our analysis.
+- Uma rede OpenStreetMap: `poa_osm.pbf`
+- Dois feeds GTFS de transporte público: `poa_eptc.zip` (ônibus) e `poa_trensurb.zip` (trens)
+- Um dado de elevação em formato raster: `poa_elevation.tif`
+- Um `data.frame` com dados de uso do solo: o arquivo `poa_hexgrid.csv`, com os centróides de uma grade hexagonal regular cobrindo a área da amostra. O data frame também indica o número de residentes e escolas em cada célula. Usaremos esses pontos como origens e destinos em nossa análise.
 
-These data sets should be saved in a single directory (our `data_path`). Here's how the land use data looks like:
+Esses conjuntos de dados devem ser salvos em um único diretório (nosso `data_path`). Aqui está um exemplo de como os dados de uso do solo se parecem:
 
 ```{r}
 # path to data directory
@@ -49,7 +50,7 @@ points <- read.csv(file.path(data_path, "poa_hexgrid.csv"))
 head(points)
 ```
 
-:mag_right: To visualize the spatial distribution of these data, we can retrieve the geometry of the H3 hexagonal grid and explore it using an interactive map:
+:mag_right: Para visualizar a distribuição espacial desses dados, podemos recuperar a geometria da grade hexagonal H3 e explorá-la usando um mapa interativo:
 
 ```{r}
 # retrieve polygons of H3 spatial grid
@@ -71,10 +72,9 @@ mapview(grid_poa, zcol = 'population')
 ```
 
 
+## Construindo uma rede de transporte roteável
 
-## Building a routable transport network
-
-This quick approach to calculate accessibility involves only 2 steps. The first step is to build the multimodal transport network using the `r5r::setup_r5()` function.
+Essa abordagem rápida para calcular a acessibilidade envolve apenas 2 etapas. A primeira etapa é construir a rede de transporte multimodal usando a função `r5r::setup_r5()`.
 
 
 ```{r, message=FALSE}
@@ -82,21 +82,20 @@ r5r_core <- r5r::setup_r5(data_path,
                           verbose = FALSE)
 ```
 
-As you can see, we only need to pass the path to our data directory to the `r5r::setup_r5()` function. The function then combines the OSM, GTFS and elevation data in this directory to create a graph that is used for routing trips between origin-destination pairs and, consequently, for calculating travel time matrices and accessibility.
+Como você pode ver, só precisamos passar o caminho da nossa pasta de dados para a função `r5r::setup_r5()`. A função então combina os dados OSM, GTFS e de elevação nesse diretório para criar um grafo que é usado para roteamento de viagens entre pares de origem e destino e, consequentemente, para calcular matrizes de tempo de viagem e acessibilidade.
 
 
+## Calculando acessibilidade: abordagem rápida
 
-## Calculating access: quick approach 
+Na segunda etapa, você pode calcular estimativas de acessibilidade em uma única chamada usando a função `r5r::accessibility()`. Ela inclui diferentes opções de funções de decaimento para calcular medidas cumulativas de acessibilidade e diferentes medidas gravitacionais.
 
-In the second step, you can calculate accessibility estimates in a single call using the `r5r::accessibility()` function. It includes different options of decay functions to compute cumulative accessibility measures and different gravity-based metrics.
+Neste exemplo, nós vamos calculamos a acessibilidade cumulativa do número de escolas e hospitais acessíveis em menos de 20 minutos por transporte público. Assim, usaremos `decay_function = "step"`.
 
-In this example, we calculate the cumulative accessibility of the number of schools and hospitals accessible in less than 20 minutes by public transport. Thus, we'll be using `decay_function = "step"`.
+Observe que, para usar `r5r::accessibility()`, o parâmetro `points` deve ser um `data.frame` com colunas que indiquem:
 
-Note that to use `r5r::accessibility()`, the input of `points` must be a `data.frame` with columns indicating:
-
-- the `id` of each location
-- spatial coordinates `lat` and `lon`
-- the number of activities in each location. The name of this column has to be passed to the `opportunities_colnames` parameter.
+- o `id` de cada local
+- coordenadas espaciais `lat` e `lon`
+- o número de atividades em cada local. O nome desta coluna deve ser passado para o parâmetro `opportunities_colnames`.
 
 
 ```{r}
@@ -122,25 +121,25 @@ access1 <- r5r::accessibility(
   )
 
 ```
-1. In minutes
-2. Note you can pass the columns of more than one type of opportunity.
-3. Similarly, you could pass more than one time threshold.
+1. Em minutos  
+2. Observe que você pode passar as colunas de mais de um tipo de oportunidade.  
+3. Da mesma forma, você poderia passar mais de um limite de tempo.
 
 ::: {.callout-tip}
-## Tip
-Note that the `r5r::accessibility()` function has several additional parameters that allow you to specify different characteristics of trips, including a maximum trip duration, walking and cycling speed, level of traffic stress (LTS), etc. For more info, check the documentation of the function by calling `?r5r::accessibility` in your R Console or check the documentation on [{r5r} website](https://ipeagit.github.io/r5r/reference/accessibility.html).
+## Dica
+Observe que a função `r5r::accessibility()` possui vários parâmetros adicionais que permitem especificar diferentes características das viagens, incluindo uma duração máxima, velocidade de caminhada e sw bicicleta, nível tolerância ao estresse do tráfego (LTS), etc. Para mais informações, consulte a documentação da função chamando `?r5r::accessibility` no seu console R ou acesse a documentação no [site do {r5r}](https://ipeagit.github.io/r5r/reference/accessibility.html).
 :::
 
-The output is a `data.frame` that shows for every origin `id` the number of opportunities that can be reached:
+O output da função `r5r::accessibility()` é um `data.frame` que mostra, para cada origem `id`, o número de oportunidades que podem ser alcançadas:
 
 ```{r}
 head(access1)
 
 ```
 
-## Accessibility map
+## Mapa de acessibilidade
 
-Now it is super simple to merge these accessibility estimates to our spatial grid to visualize these results on a map.
+Agora é muito simples unir essas estimativas de acessibilidade à nossa grade espacial para visualizar esses resultados em um mapa.
 
 ```{r}
 # merge spatial grid with accessibility estimates
@@ -154,8 +153,8 @@ access_sf <- left_join(
 ggplot() +
   geom_sf(data = access_sf, aes(fill = accessibility), color= NA) +
   scale_fill_viridis_c(direction = -1, option = 'B') +
-  labs(title = 'Number of schools and hospitals accessible by public transport in 20 minutes',
-       fill = 'Number of\nfacilities') +
+  labs(title = 'Número de escolas e hospitais acessíveis por transporte público em 20 minutos',
+       fill = 'Número de\nestabelecimentos') +
   theme_minimal() +
   theme(axis.title = element_blank()) +
   facet_wrap(~opportunity) +

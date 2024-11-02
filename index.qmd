@@ -1,6 +1,6 @@
 # Introdução à oficina
 
-Este site apresenta o material de apoio para a oficina **"Um Curso Prático Sobre Acessibilidade Urbana em R"**. A oficina será realizada como parte da programação do 38<sup>o</sup> [Congresso de Pesquisa e Ensino em Transportes](https://eventos.galoa.com.br/anpet-2024/page/4185-home), em Florianópolis, entre os dias 4 e 8 de novembro de 2024. A oficina é patrocinada pela [Associação Nacional de Pesquisa e Ensino em Transportes (ANPET)](https://www.anpet.org.br/index.php/pt/).
+Este site apresenta o material de apoio para a oficina **"Um Curso Prático de Acessibilidade Urbana em R"**. A oficina será realizada como parte da programação do 38<sup>o</sup> [Congresso de Pesquisa e Ensino em Transportes](https://eventos.galoa.com.br/anpet-2024/page/4185-home), em Florianópolis, entre os dias 4 e 8 de novembro de 2024. A oficina é patrocinada pela [Associação Nacional de Pesquisa e Ensino em Transportes (ANPET)](https://www.anpet.org.br/index.php/pt/).
 
 <!-- <img src="/images/conference_banner.png" width="600" align="center"> --> 
 ![](images/conference_banner.png){width=550 fig-align="center"}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.43">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Um Curso Prático Sobre Acessibilidade Urbana em R – 5&nbsp; Aborgadem flexivel</title>
+<title>Um Curso Prático de Acessibilidade Urbana em R – 5&nbsp; Abordagem flexível</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,25 +111,25 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="citation_title" content="[5]{.chapter-number}&nbsp; [Aborgadem flexivel]{.chapter-title}">
+<meta name="citation_title" content="[5]{.chapter-number}&nbsp; [Abordagem flexível]{.chapter-title}">
 <meta name="citation_fulltext_html_url" content="https://ipeagit.github.io/oficina_acessibilidade_anpet_2024//3.2_flexible_approach.html">
-<meta name="citation_language" content="en">
+<meta name="citation_language" content="pt">
 <meta name="citation_reference" content="citation_title=Accessibility evaluation of land-use and transport strategies: Review and research directions;,citation_author=Karst Geurs;,citation_author=Bert Wee;,citation_publication_date=2004-06;,citation_cover_date=2004-06;,citation_year=2004;,citation_issue=2;,citation_doi=10.1016/j.jtrangeo.2003.10.005;,citation_issn=09666923;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Journal of Transport Geography;">
 <meta name="citation_reference" content="citation_title=Calculating place-based transit accessibility: Methods, tools and algorithmic dependence;,citation_author=Christopher Higgins;,citation_author=Matthew Palm;,citation_author=Amber DeJohn;,citation_author=Luna Xi;,citation_author=James Vaughan;,citation_author=Steven Farber;,citation_author=Michael Widener;,citation_author=Eric Miller;,citation_publication_date=2022-02;,citation_cover_date=2022-02;,citation_year=2022;,citation_issue=1;,citation_doi=10.5198/jtlu.2022.2012;,citation_issn=1938-7849;,citation_volume=15;,citation_journal_title=Journal of Transport and Land Use;">
 <meta name="citation_reference" content="citation_title=From mobility to accessibility: Transforming urban transportation and land-use planning;,citation_author=Jonathan Levine;,citation_author=Joe Grengs;,citation_author=Louis A. Merlin;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;">
@@ -163,13 +163,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.2_flexible_approach.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.2_flexible_approach.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -181,19 +181,19 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Um Curso Prático Sobre Acessibilidade Urbana em R</a> 
+      <a href="./">Um Curso Prático de Acessibilidade Urbana em R</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Github" class="quarto-navigation-tool px-1" aria-label="Github"><i class="bi bi-github"></i></a>
     <a href="https://x.com/UrbanDemog" title="twitter" class="quarto-navigation-tool px-1" aria-label="twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://www.linkedin.com/in/rafael-h-m-pereira/" title="linkedin" class="quarto-navigation-tool px-1" aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -207,8 +207,8 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">2. Getting started</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">2. Primeiros passos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -231,7 +231,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">3. Calculando acessibilidade</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -245,13 +245,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3.2_flexible_approach.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3.3_equity_measures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></span></a>
   </div>
 </li>
       </ul>
@@ -263,16 +263,17 @@ div.csl-indent {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Índice</h2>
   <ul>
-  <li><a href="#building-a-routable-transport-network" id="toc-building-a-routable-transport-network" class="nav-link active" data-scroll-target="#building-a-routable-transport-network"><span class="header-section-number">5.1</span> Building a routable transport network</a></li>
-  <li><a href="#computing-a-travel-time-matrix" id="toc-computing-a-travel-time-matrix" class="nav-link" data-scroll-target="#computing-a-travel-time-matrix"><span class="header-section-number">5.2</span> Computing a travel time matrix</a></li>
+  <li><a href="#construindo-uma-rede-de-transporte-roteável" id="toc-construindo-uma-rede-de-transporte-roteável" class="nav-link active" data-scroll-target="#construindo-uma-rede-de-transporte-roteável"><span class="header-section-number">5.1</span> Construindo uma rede de transporte roteável</a></li>
+  <li><a href="#calculando-uma-matriz-de-tempo-de-viagem" id="toc-calculando-uma-matriz-de-tempo-de-viagem" class="nav-link" data-scroll-target="#calculando-uma-matriz-de-tempo-de-viagem"><span class="header-section-number">5.2</span> Calculando uma matriz de tempo de viagem</a></li>
   <li><a href="#calculating-accessibility" id="toc-calculating-accessibility" class="nav-link" data-scroll-target="#calculating-accessibility"><span class="header-section-number">5.3</span> Calculating accessibility</a>
   <ul class="collapse">
-  <li><a href="#cumulative-accessibility-measure" id="toc-cumulative-accessibility-measure" class="nav-link" data-scroll-target="#cumulative-accessibility-measure"><span class="header-section-number">5.3.1</span> Cumulative accessibility measure</a></li>
-  <li><a href="#gravity-based-accessibility-measures" id="toc-gravity-based-accessibility-measures" class="nav-link" data-scroll-target="#gravity-based-accessibility-measures"><span class="header-section-number">5.3.2</span> Gravity-based accessibility measures</a></li>
+  <li><a href="#medida-de-acessibilidade-cumulativa" id="toc-medida-de-acessibilidade-cumulativa" class="nav-link" data-scroll-target="#medida-de-acessibilidade-cumulativa"><span class="header-section-number">5.3.1</span> Medida de acessibilidade cumulativa</a></li>
+  <li><a href="#acessibilidade-cumulativa-baseada-em-intervalo-de-tempo" id="toc-acessibilidade-cumulativa-baseada-em-intervalo-de-tempo" class="nav-link" data-scroll-target="#acessibilidade-cumulativa-baseada-em-intervalo-de-tempo"><span class="header-section-number">5.3.2</span> Acessibilidade cumulativa baseada em intervalo de tempo</a></li>
+  <li><a href="#medidas-de-acessibilidade-baseadas-em-gravidade" id="toc-medidas-de-acessibilidade-baseadas-em-gravidade" class="nav-link" data-scroll-target="#medidas-de-acessibilidade-baseadas-em-gravidade"><span class="header-section-number">5.3.3</span> Medidas de acessibilidade baseadas em gravidade</a></li>
   </ul></li>
-  <li><a href="#accessibility-map" id="toc-accessibility-map" class="nav-link" data-scroll-target="#accessibility-map"><span class="header-section-number">5.4</span> Accessibility map</a></li>
+  <li><a href="#mapa-de-acessibilidade" id="toc-mapa-de-acessibilidade" class="nav-link" data-scroll-target="#mapa-de-acessibilidade"><span class="header-section-number">5.4</span> Mapa de Acessibilidade</a></li>
   </ul>
 </nav>
     </div>
@@ -280,17 +281,17 @@ div.csl-indent {
 <div class="quarto-about-solana column-body">
   <div class="about-entity">
     <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.2_flexible_approach.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></a></li></ol></nav>
+      <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.2_flexible_approach.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></h1>
 </div>
 <div class="quarto-title-meta">
   </div>
 </header> 
       <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<p>In the the previous section, we learned a ‘quick approach’ to calculate accessibility directly from within <code>{r5r}</code>. A shortcoming of this approach is that it is limited to only a few predefined accessibility metrics available in <code>{r5r}</code>. Oftentimes, we want to analyze other types of accessibility metrics and/or to have more control of the different steps of the analysis.</p>
-<p><strong>In this section, we’ll learn how to calculate travel time matrices and to use them to compute different types of accessibility metrics.</strong> This is a more ‘flexible’ approach that combines the capabilities of the <code>{r5r}</code> and the <code>{accessibility}</code> packages. We’ll use again the sample data for the city of Porto Alegre, Brazil, that comes with the <code>{r5r}</code> package.</p>
+<p>Na seção anterior, nós aprendemos uma ‘abordagem rápida’ para calcular a acessibilidade diretamente dentro do <code>{r5r}</code>. Uma limitação dessa abordagem é que ela se restringe apenas a algumas métricas de acessibilidade predefinidas disponíveis no <code>{r5r}</code>. Frequentemente, queremos analisar outros tipos de métricas de acessibilidade e/ou ter mais controle sobre as diferentes etapas da análise.</p>
+<p><strong>Nesta seção, aprenderemos como calcular matrizes de tempo de viagem e usá-las para calcular diferentes tipos de métricas de acessibilidade.</strong> Esta é uma abordagem mais ‘flexível’ que combina os pacotes <code>{r5r}</code> e <code>{accessibility}</code>. Usaremos novamente os dados de exemplo da cidade de Porto Alegre, Brasil, que vêm com o pacote <code>{r5r}</code>.</p>
 <!-- package logos side by side  -->
 <div style="text-align: center">
 <table>
@@ -304,13 +305,15 @@ div.csl-indent {
 </tr>
 </tbody></table>
 </div>
-<p>This flexible approach to calculate accessibility only involves 3 steps:</p>
+<p>Esta abordagem flexível para calcular a acessibilidade envolve apenas 3 etapas:</p>
 <ol type="1">
-<li>Building a routable transport network</li>
-<li>Computing a travel time matrix</li>
-<li>Calculating accessibility</li>
+<li>Construir uma rede de transporte roteável<br>
+</li>
+<li>Calcular uma matriz de tempo de viagem<br>
+</li>
+<li>Calcular a acessibilidade</li>
 </ol>
-<p>Now let’s start loading the packages we need:</p>
+<p>Agora vamos começar carregando os pacotes necessários:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># allocating memory to java</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">java.parameters =</span> <span class="st">"-Xmx6G"</span>)</span>
@@ -320,24 +323,24 @@ div.csl-indent {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(h3jsr)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="building-a-routable-transport-network" class="level2" data-number="5.1">
-<h2 data-number="5.1" data-anchor-id="building-a-routable-transport-network"><span class="header-section-number">5.1</span> Building a routable transport network</h2>
-<p>First, we build the multimodal transport network by passing the path of our data directory to the <code>r5r::setup_r5()</code> function.</p>
+<section id="construindo-uma-rede-de-transporte-roteável" class="level2" data-number="5.1">
+<h2 data-number="5.1" data-anchor-id="construindo-uma-rede-de-transporte-roteável"><span class="header-section-number">5.1</span> Construindo uma rede de transporte roteável</h2>
+<p>Primeiro, construímos a rede de transporte multimodal passando o caminho da nossa pasta com de dados para a função <code>r5r::setup_r5()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># path to data directory</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/poa"</span>, <span class="at">package =</span> <span class="st">"r5r"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># build network</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>r5r_core <span class="ot">&lt;-</span> r5r<span class="sc">::</span><span class="fu">setup_r5</span>(data_path, </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                          <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                          <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="computing-a-travel-time-matrix" class="level2" data-number="5.2">
-<h2 data-number="5.2" data-anchor-id="computing-a-travel-time-matrix"><span class="header-section-number">5.2</span> Computing a travel time matrix</h2>
-<p>The second step is to calculate a travel time matrix with door-to-door travel time estimates from all origins to all destinations. To do this, we use the <code>r5r::travel_time_matrix()</code> function.</p>
-<p>As basic inputs, this function receives the routable network created above, origin and destination points as <code>data.frames</code> with columns <code>id</code>, <code>lon</code> and <code>lat</code>, the transportation mode and the departure time.</p>
+<section id="calculando-uma-matriz-de-tempo-de-viagem" class="level2" data-number="5.2">
+<h2 data-number="5.2" data-anchor-id="calculando-uma-matriz-de-tempo-de-viagem"><span class="header-section-number">5.2</span> Calculando uma matriz de tempo de viagem</h2>
+<p>A segunda etapa é calcular uma matriz de tempo de viagem com estimativas de porta-a-porta de todas as origens para todos os destinos. Para isso, usamos a função <code>r5r::travel_time_matrix()</code>.</p>
+<p>Essa função recebe como input a rede roteável criada acima, pontos de origem e destino como <code>data.frames</code> com colunas <code>id</code>, <code>lon</code> e <code>lat</code>, o modo de transporte e o horário de partida.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read points data</span></span>
 <span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(data_path, <span class="st">"poa_hexgrid.csv"</span>))</span>
@@ -357,12 +360,12 @@ div.csl-indent {
 <span id="annotated-cell-3-16"><a href="#annotated-cell-3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">departure_datetime =</span> departure_datetime,</span>
 <span id="annotated-cell-3-17"><a href="#annotated-cell-3-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">max_trip_duration =</span> max_trip_duration,</span>
 <span id="annotated-cell-3-18"><a href="#annotated-cell-3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">progress =</span> <span class="cn">TRUE</span></span>
-<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19" aria-hidden="true" tabindex="-1"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="1">In minutes</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="1">Em minutos</span>
 </dd>
 </dl>
 </div>
@@ -373,16 +376,16 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that the <code>r5r::travel_time_matrix()</code> includes several additional parameters that allow you to specify some trip characteristics, such as maximum walking time, a departure time window, the maximum number of public transport legs allowed, etc. For more info, check the documentation of the function by calling <code>?r5r::travel_time_matrix</code> in your R Console or check the documentation on <a href="https://ipeagit.github.io/r5r/reference/travel_time_matrix.html">{r5r} website</a>.</p>
+<p>Observe que a função <code>r5r::travel_time_matrix()</code> inclui vários parâmetros adicionais que permitem especificar algumas características da viagem, como tempo máximo de caminhada, uma janela de horário de partida, o número máximo de trechos de transporte público permitidos, etc. Para mais informações, consulte a documentação da função chamando <code>?r5r::travel_time_matrix</code> no Console no R ou acesse a documentação no <a href="https://ipeagit.github.io/r5r/reference/travel_time_matrix.html">site do {r5r}</a>.</p>
 </div>
 </div>
-<p>The output is a <code>data.frame</code>, which looks like this. It is a matrix in long format with the columns <code>from_id</code>, <code>to_id</code> and a third column indicating the travel time (in minutes) for each origin-destination pair.</p>
+<p>O output é um <code>data.frame</code>, com essa cara abaixo. É uma matriz em formato longo com as colunas <code>from_id</code>, <code>to_id</code> e uma terceira coluna indicando o tempo de viagem (em minutos) para cada par de origem e destino.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ttm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ttm)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           from_id           to_id travel_time_p50
             &lt;char&gt;          &lt;char&gt;           &lt;int&gt;
@@ -400,37 +403,37 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Processing speed
+Velocidade de processamento
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The <code>travel_time_matrix()</code> function uses an extension of the RAPTOR routing algorithm <span class="citation" data-cites="conway2017evidencebased">(<a href="#ref-conway2017evidencebased" role="doc-biblioref">Conway, Byrd, and van der Linden 2017</a>)</span>, making R5 extremely fast. Depending on the number of origin-destination pairs, <code>{r5r}</code> can calculate travel time matrices between 6 and 200 times faster than other multimodal routing engines <span class="citation" data-cites="higgins2022calculating">(<a href="#ref-higgins2022calculating" role="doc-biblioref">Higgins et al. 2022</a>)</span>.</p>
+<p>A função <code>travel_time_matrix()</code> utiliza uma extensão do algoritmo de roteamento RAPTOR <span class="citation" data-cites="conway2017evidencebased">(<a href="#ref-conway2017evidencebased" role="doc-biblioref">Conway, Byrd, e van der Linden 2017</a>)</span>, o que torna o R5 extremamente rápido. Dependendo do número de pares de origem e destino, o <code>{r5r}</code> pode calcular matrizes de tempo de viagem entre 6 e 200 vezes mais rápido do que outros programas de roteamento multimodal <span class="citation" data-cites="higgins2022calculating">(<a href="#ref-higgins2022calculating" role="doc-biblioref">Higgins et al. 2022</a>)</span>.</p>
 </div>
 </div>
 </section>
 <section id="calculating-accessibility" class="level2" data-number="5.3">
 <h2 data-number="5.3" data-anchor-id="calculating-accessibility"><span class="header-section-number">5.3</span> Calculating accessibility</h2>
 <p><img align="right" src="./images/accessibility_logo.png" alt="logo" width="140"></p>
-<p>Having computed a travel time matrix, we can combine it with land use data to calculate accessibility. For this, we will use the <code>{accessibility}</code> package, which provides some fast and convenient functions to calculate several accessibility measures.</p>
-<p>The package currently includes more than 7 different types of accessibility measures (see details in the package <a href="https://ipeagit.github.io/accessibility/reference/cost_to_closest.html">documentation website</a>).</p>
+<p>Depois de calcular uma matriz de tempo de viagem, podemos combiná-la com dados de uso do solo para calcular a acessibilidade. Para isso, usaremos o pacote <code>{accessibility}</code>, que oferece funções rápidas e convenientes para calcular várias medidas de acessibilidade.</p>
+<p>O pacote atualmente inclui mais de 7 tipos diferentes de medidas de acessibilidade (veja os detalhes no <a href="https://ipeagit.github.io/accessibility/reference/cost_to_closest.html">site de documentação do pacote</a>).</p>
 <ul>
-<li><code>cost_to_closest()</code>: Minimum travel cost to closest N number of opportunities</li>
-<li><code>cumulative_cutoff()</code>: Cumulative access based on a travel cost <em>cutoff</em></li>
-<li><code>cumulative_interval()</code>: Cumulative access based on a travel time <em>interval</em></li>
-<li><code>gravity()</code>: Gravity-based accessibility measures</li>
-<li><code>floating_catchment_area()</code>: Floating catchment area accessibility</li>
-<li><code>spatial_availability()</code>: Spatial availability</li>
-<li><code>balancing_cost()</code>: Balancing cost accessibility measure</li>
+<li><code>cost_to_closest()</code>: Custo mínimo de viagem até as N oportunidades mais próximas</li>
+<li><code>cumulative_cutoff()</code>: Acesso cumulativo com base em um <em>limite</em> de tempo de viagem</li>
+<li><code>cumulative_interval()</code>: Acesso cumulativo com base em um <em>intervalo</em> de tempo de viagem</li>
+<li><code>gravity()</code>: Medidas de acessibilidade gravitacioinais</li>
+<li><code>floating_catchment_area()</code>: Área de captação flutuante</li>
+<li><code>spatial_availability()</code>: Disponibilidade espacial</li>
+<li><code>balancing_cost()</code>: Medida de acessibilidade de custo de balanceamento</li>
 </ul>
-<p>As basic inputs, all functions of the package require a pre-calculated cost matrix (in our case, a travel time matrix) and some land use data with the number of opportunities (e.g.&nbsp;schools, jobs) in each cell of the study area. Both inputs must be organized in a <code>data.frame</code> format. We have just seen above the structure of the travel matrix. The land use <code>data.frame</code> must be organized like this:</p>
+<p>Todas as funções do pacote recebem como input (a) uma matriz de custos pré-calculada - no nosso caso, uma matriz de tempo de viagem, e (b) alguns dados de uso do solo com o número de oportunidades (por exemplo, escolas, empregos) em cada célula da área de estudo. Ambos os dados devem estar organizados no formato <code>data.frame</code>. Vimos acima a estrutura da matriz de viagem. O <code>data.frame</code> de uso do solo deve estar organizado assim:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># land use data</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-2" class="code-annotation-target"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(points)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-2" class="code-annotation-target"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(points)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="2" data-code-annotation="1">The land use data must contain an <code>id</code> column, referring to the ids listed in the travel matrix, and the number of opportunities in each location.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="2" data-code-annotation="1">Os dados de uso do solo devem conter uma coluna <code>id</code>, referindo-se aos ids listados na matriz de viagem, e o número de oportunidades em cada local.</span>
 </dd>
 </dl>
 </div>
@@ -444,13 +447,13 @@ Processing speed
 6 89a901285cfffff -51.21108 -30.08124       1170       0  427          0</code></pre>
 </div>
 </div>
-<p>Now let’s calculate a few accessibility indicators.</p>
-<section id="cumulative-accessibility-measure" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" data-anchor-id="cumulative-accessibility-measure"><span class="header-section-number">5.3.1</span> Cumulative accessibility measure</h3>
-<section id="threshold-based-cumulative-accessibility" class="level4" data-number="5.3.1.1">
-<h4 data-number="5.3.1.1" data-anchor-id="threshold-based-cumulative-accessibility"><span class="header-section-number">5.3.1.1</span> Threshold-based cumulative accessibility</h4>
-<p>To calculate a traditional cumulative accessibility measure, we can use the <code>accessibility::cumulative_cutoff()</code> function. Along with the travel matrix and land use data sets, we only need to pass the name of the column with the travel time values, the name of the column with the count of opportunities, and a travel time cutoff.</p>
-<p>Here, we calculate the number of schools accessible in 20 minutes.</p>
+<p>Agora vamos calcular alguns indicadores de acessibilidade.</p>
+<section id="medida-de-acessibilidade-cumulativa" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" data-anchor-id="medida-de-acessibilidade-cumulativa"><span class="header-section-number">5.3.1</span> Medida de acessibilidade cumulativa</h3>
+<section id="acessibilidade-cumulativa-baseada-em-limite-de-tempo" class="level4" data-number="5.3.1.1">
+<h4 data-number="5.3.1.1" data-anchor-id="acessibilidade-cumulativa-baseada-em-limite-de-tempo"><span class="header-section-number">5.3.1.1</span> Acessibilidade cumulativa baseada em limite de tempo</h4>
+<p>Para calcular uma medida tradicional de acessibilidade cumulativa, podemos usar a função <code>accessibility::cumulative_cutoff()</code>. Junto com a matriz de viagem e os conjuntos de dados de uso do solo, precisamos apenas passar o nome da coluna com os valores de tempo de viagem, o nome da coluna com a contagem de oportunidades e um limite de tempo de viagem.</p>
+<p>Aqui, calculamos o número de escolas acessíveis em 20 minutos.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># threshold-based cumulative accessibility</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>access_cum_t <span class="ot">&lt;-</span> accessibility<span class="sc">::</span><span class="fu">cumulative_cutoff</span>(</span>
@@ -461,7 +464,7 @@ Processing speed
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cutoff =</span> <span class="dv">20</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_cum_t)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_cum_t)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                id schools
             &lt;char&gt;   &lt;int&gt;
@@ -474,11 +477,12 @@ Processing speed
 </div>
 </div>
 </section>
-<section id="interval-based-cumulative-accessibility" class="level4" data-number="5.3.1.2">
-<h4 data-number="5.3.1.2" data-anchor-id="interval-based-cumulative-accessibility"><span class="header-section-number">5.3.1.2</span> Interval-based cumulative accessibility</h4>
-<p>Previous studies have shown that the <em>ad-hoc</em> choice of a single travel time threshold can substantially influence the results of traditional cumulative accessibility measures, introducing bias into transport project evaluations and equity analyses <span class="citation" data-cites="pereira2019future">(<a href="#ref-pereira2019future" role="doc-biblioref">Pereira 2019</a>)</span>. To overcome this issue, we have proposed a <em>time interval</em> cumulative accessibility measure <span class="citation" data-cites="tomasiello2023time">(<a href="#ref-tomasiello2023time" role="doc-biblioref">Tomasiello et al. 2023</a>)</span>. This new metric estimates the average (or the median) number of opportunities that can be reached considering multiple minute-by-minute cutoffs within a given travel time interval.</p>
-<p>The main advantage of this metric is that it mitigates the impacts of arbitrary choices of trip duration on accessibility analysis while preserving the computation and communicability advantages of threshold-based cumulative measures.</p>
-<p>Here, we calculate the average number of schools that can be reached between 20 and 30 minutes.</p>
+</section>
+<section id="acessibilidade-cumulativa-baseada-em-intervalo-de-tempo" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" data-anchor-id="acessibilidade-cumulativa-baseada-em-intervalo-de-tempo"><span class="header-section-number">5.3.2</span> Acessibilidade cumulativa baseada em intervalo de tempo</h3>
+<p>Estudos anteriores mostraram que a escolha <em>ad hoc</em> de um único limite de tempo de viagem pode influenciar substancialmente os resultados das medidas tradicionais de acessibilidade cumulativa, introduzindo viés nas avaliações de projetos de transporte e análises de equidade <span class="citation" data-cites="pereira2019future">(<a href="#ref-pereira2019future" role="doc-biblioref">Pereira 2019</a>)</span>. Para superar esse problema, propusemos uma medida de acessibilidade cumulativa com <em>intervalo de tempo</em> <span class="citation" data-cites="tomasiello2023time">(<a href="#ref-tomasiello2023time" role="doc-biblioref">Tomasiello et al. 2023</a>)</span>. Essa nova métrica estima o número médio (ou mediano) de oportunidades que podem ser alcançadas considerando múltiplos limites minuto a minuto dentro de um intervalo de tempo de viagem.</p>
+<p>A principal vantagem dessa métrica é que ela mitiga os impactos de escolhas arbitrárias de duração de viagem na análise de acessibilidade, enquanto preserva as vantagens de cálculo e comunicabilidade das medidas cumulativas baseadas em limites.</p>
+<p>Aqui, calculamos o número médio de escolas que podem ser alcançadas entre 15 e 25 minutos.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># interval-based cumulative accessibility</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>access_cum_i <span class="ot">&lt;-</span> accessibility<span class="sc">::</span><span class="fu">cumulative_interval</span>(</span>
@@ -486,11 +490,11 @@ Processing speed
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">land_use_data =</span> points,</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">travel_cost =</span> <span class="st">'travel_time_p50'</span>,</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">opportunity =</span> <span class="st">'schools'</span>,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">interval =</span> <span class="fu">c</span>(<span class="dv">15</span>,<span class="dv">25</span>),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">interval =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">25</span>),</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">summary_function =</span> mean</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_cum_i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_cum_i)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                id schools
             &lt;char&gt;   &lt;int&gt;
@@ -504,16 +508,15 @@ Processing speed
 </div>
 <!-- 
 ::: {.callout-tip}
-## Active Vs Passive accessibility
-By default, most functions of `{accessibility}` calculate *active* accessibility, i.e. some weighted count of opportunities that can be reached when *departing* from a given location. By setting the parater `active = FALSE`, you can calculate the catchment area (aka passive accessibility) of a given location, i.e. the number of people that could *arrive*.....
+## Acessibilidade Ativa vs Passiva
+Por padrão, a maioria das funções do `{accessibility}` calcula a acessibilidade *ativa*, ou seja, uma contagem ponderada de oportunidades que podem ser alcançadas ao *sair* de um determinado local. Ao definir o parâmetro `active = FALSE`, você pode calcular a área de captação (também conhecida como acessibilidade passiva) de um determinado local, ou seja, o número de pessoas que poderiam *chegar*...
 :::
  -->
 </section>
-</section>
-<section id="gravity-based-accessibility-measures" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" data-anchor-id="gravity-based-accessibility-measures"><span class="header-section-number">5.3.2</span> Gravity-based accessibility measures</h3>
-<p>The package also includes <code>accessibility::gravity()</code> to calculate gravity-based accessibility metrics in a very flexible way.</p>
-<p>It includes a <code>decay_function</code> parameter that can receive any <em>function</em> to convert travel cost into an impedance factor used to weight opportunities. For convenience, the package currently includes the following functions:</p>
+<section id="medidas-de-acessibilidade-baseadas-em-gravidade" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" data-anchor-id="medidas-de-acessibilidade-baseadas-em-gravidade"><span class="header-section-number">5.3.3</span> Medidas de acessibilidade baseadas em gravidade</h3>
+<p>O pacote também inclui a função <code>accessibility::gravity()</code> para calcular métricas de acessibilidade baseadas em gravidade de forma muito flexível.</p>
+<p>Ela possui um parâmetro <code>decay_function</code> que pode receber qualquer <em>função</em> para converter o custo de viagem em um fator de impedância usado para ponderar as oportunidades. Para conveniência, o pacote atualmente inclui as seguintes funções:</p>
 <ul>
 <li><code>decay_binary()</code></li>
 <li><code>decay_exponential()</code></li>
@@ -522,7 +525,7 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 <li><code>decay_power()</code></li>
 <li><code>decay_stepped()</code></li>
 </ul>
-<p>Let’s see a couple examples with logistic and negative exponential decay functions:</p>
+<p>Vamos ver alguns exemplos com as funções de decaimento logístico e exponencial negativo:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># logistic decay</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>access_lgst <span class="ot">&lt;-</span> <span class="fu">gravity</span>(</span>
@@ -540,12 +543,12 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">decay_function =</span> <span class="fu">decay_exponential</span>(<span class="at">decay_value =</span> <span class="fl">0.1</span>),</span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">opportunity =</span> <span class="st">"schools"</span>,</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">travel_cost =</span> <span class="st">"travel_time_p50"</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Here’s a quick visualization of the shape of the decay curves we’ve used.</p>
+<p>Aqui está uma rápida visualização da forma das curvas de decaimento que utilizamos.</p>
 <div class="cell" data-code-show="false">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>negative_exp <span class="ot">&lt;-</span> <span class="fu">decay_exponential</span>(<span class="at">decay_value =</span> <span class="fl">0.1</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>logistic <span class="ot">&lt;-</span> <span class="fu">decay_logistic</span>(<span class="at">cutoff =</span> <span class="dv">15</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -569,7 +572,7 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(minutes, weights, <span class="at">color =</span> decay_function),</span>
 <span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>            <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> decay_function, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -581,9 +584,9 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 </div>
 </section>
 </section>
-<section id="accessibility-map" class="level2" data-number="5.4">
-<h2 data-number="5.4" data-anchor-id="accessibility-map"><span class="header-section-number">5.4</span> Accessibility map</h2>
-<p>Now it is super simple to merge all of these accessibility estimates to our spatial grid to visualize these results on a map.</p>
+<section id="mapa-de-acessibilidade" class="level2" data-number="5.4">
+<h2 data-number="5.4" data-anchor-id="mapa-de-acessibilidade"><span class="header-section-number">5.4</span> Mapa de Acessibilidade</h2>
+<p>Agora é muito simples unir todas essas estimativas de acessibilidade à nossa grade espacial para visualizar esses resultados em um mapa.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rbind all accessibility results in a single data.frame</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>access_cum_t<span class="sc">$</span>metric <span class="ot">&lt;-</span> <span class="st">'cum_threshold'</span></span>
@@ -608,18 +611,18 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  grid, </span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  df, </span>
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'h3_address'</span><span class="ot">=</span><span class="st">'id'</span>)</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Plot map</p>
+<p>Gerar mapa com visualização espacial dos resultados</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> access_sf, <span class="fu">aes</span>(<span class="at">fill =</span> schools), <span class="at">color=</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">option =</span> <span class="st">'B'</span>) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Access to schools by public transport using different accessibility metrics"</span>, <span class="at">fill =</span> <span class="st">"Access</span><span class="sc">\n</span><span class="st">score"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Acesso a escolas por transporte público usando diferentes métricas de acessibilidade"</span>, <span class="at">fill =</span> <span class="st">"Índice de</span><span class="sc">\n</span><span class="st">acessibilidade"</span>) <span class="sc">+</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>metric) <span class="sc">+</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -634,16 +637,16 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The <code>{r5r}</code> package has several advanced capabilities:</p>
+<p>O pacote <code>{r5r}</code> possui várias funcionalidades avançadas:</p>
 <ul>
-<li>Accounting for monetary costs</li>
-<li>Accounting for Level of Traffic Stress (LTS)</li>
-<li>Using a departure window period instead of an exact departure time</li>
-<li>Trip planning with detailed ouputs</li>
-<li>Calculating isochrones</li>
-<li>Generating larger-than-memory outputs</li>
+<li>Consideração de custos monetários</li>
+<li>Consideração Nível de tolerância ao Estresse do Tráfego (LTS)</li>
+<li>Uso de uma janela de partida em vez de um horário exato</li>
+<li>Planejamento de viagens com output detalhado</li>
+<li>Cálculo de isócronas</li>
+<li>Geração de outputs que não cabem na memória RAM</li>
 </ul>
-<p>See the <a href="https://ipeagit.github.io/r5r/index.html">package vignettes on the website fore more info</a>.</p>
+<p>Consulte as <a href="https://ipeagit.github.io/r5r/index.html">vignettes do pacote no site para mais informações</a>.</p>
 </div>
 </div>
 </div>
@@ -651,16 +654,16 @@ By default, most functions of `{accessibility}` calculate *active* accessibility
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-conway2017evidencebased" class="csl-entry" role="listitem">
-Conway, Matthew Wigginton, Andrew Byrd, and Marco van der Linden. 2017. <span>“Evidence-<span>Based Transit</span> and <span>Land Use Sketch Planning Using Interactive Accessibility Methods</span> on <span>Combined Schedule</span> and <span>Headway-Based Networks</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2653 (1): 45–53. <a href="https://doi.org/10.3141/2653-06">https://doi.org/10.3141/2653-06</a>.
+Conway, Matthew Wigginton, Andrew Byrd, e Marco van der Linden. 2017. <span>«Evidence-<span>Based Transit</span> and <span>Land Use Sketch Planning Using Interactive Accessibility Methods</span> on <span>Combined Schedule</span> and <span>Headway-Based Networks</span>»</span>. <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2653 (1): 45–53. <a href="https://doi.org/10.3141/2653-06">https://doi.org/10.3141/2653-06</a>.
 </div>
 <div id="ref-higgins2022calculating" class="csl-entry" role="listitem">
-Higgins, Christopher, Matthew Palm, Amber DeJohn, Luna Xi, James Vaughan, Steven Farber, Michael Widener, and Eric Miller. 2022. <span>“Calculating Place-Based Transit Accessibility: <span>Methods</span>, Tools and Algorithmic Dependence.”</span> <em>Journal of Transport and Land Use</em> 15 (1). <a href="https://doi.org/10.5198/jtlu.2022.2012">https://doi.org/10.5198/jtlu.2022.2012</a>.
+Higgins, Christopher, Matthew Palm, Amber DeJohn, Luna Xi, James Vaughan, Steven Farber, Michael Widener, e Eric Miller. 2022. <span>«Calculating Place-Based Transit Accessibility: <span>Methods</span>, Tools and Algorithmic Dependence»</span>. <em>Journal of Transport and Land Use</em> 15 (1). <a href="https://doi.org/10.5198/jtlu.2022.2012">https://doi.org/10.5198/jtlu.2022.2012</a>.
 </div>
 <div id="ref-pereira2019future" class="csl-entry" role="listitem">
-Pereira, Rafael H. M. 2019. <span>“Future Accessibility Impacts of Transport Policy Scenarios: Equity and Sensitivity to Travel Time Thresholds for Bus Rapid Transit Expansion in Rio de Janeiro.”</span> <em>Journal of Transport Geography</em> 74: 321–32. https://doi.org/<a href="https://doi.org/10.1016/j.jtrangeo.2018.12.005">https://doi.org/10.1016/j.jtrangeo.2018.12.005</a>.
+Pereira, Rafael H. M. 2019. <span>«Future accessibility impacts of transport policy scenarios: Equity and sensitivity to travel time thresholds for Bus Rapid Transit expansion in Rio de Janeiro»</span>. <em>Journal of Transport Geography</em> 74: 321–32. https://doi.org/<a href="https://doi.org/10.1016/j.jtrangeo.2018.12.005">https://doi.org/10.1016/j.jtrangeo.2018.12.005</a>.
 </div>
 <div id="ref-tomasiello2023time" class="csl-entry" role="listitem">
-Tomasiello, Diego Bogado, Daniel Herszenhut, João Lucas Albuquerque Oliveira, Carlos Kaue Vieira Braga, and Rafael H. M. Pereira. 2023. <span>“A Time Interval Metric for Cumulative Opportunity Accessibility.”</span> <em>Applied Geography</em> 157 (August): 103007. <a href="https://doi.org/10.1016/j.apgeog.2023.103007">https://doi.org/10.1016/j.apgeog.2023.103007</a>.
+Tomasiello, Diego Bogado, Daniel Herszenhut, João Lucas Albuquerque Oliveira, Carlos Kaue Vieira Braga, e Rafael H. M. Pereira. 2023. <span>«A Time Interval Metric for Cumulative Opportunity Accessibility»</span>. <em>Applied Geography</em> 157 (agosto): 103007. <a href="https://doi.org/10.1016/j.apgeog.2023.103007">https://doi.org/10.1016/j.apgeog.2023.103007</a>.
 </div>
 </div>
 </section>
@@ -849,12 +852,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1272,8 +1275,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./3.3_equity_measures.html" class="pagination-link" aria-label="Equity measures">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./3.3_equity_measures.html" class="pagination-link" aria-label="Medidas de equidade">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

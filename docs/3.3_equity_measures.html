@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.43">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Um Curso Prático Sobre Acessibilidade Urbana em R – 6&nbsp; Equity measures</title>
+<title>Um Curso Prático de Acessibilidade Urbana em R – 6&nbsp; Medidas de equidade</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,25 +110,25 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="citation_title" content="[6]{.chapter-number}&nbsp; [Equity measures]{.chapter-title}">
+<meta name="citation_title" content="[6]{.chapter-number}&nbsp; [Medidas de equidade]{.chapter-title}">
 <meta name="citation_fulltext_html_url" content="https://ipeagit.github.io/oficina_acessibilidade_anpet_2024//3.3_equity_measures.html">
-<meta name="citation_language" content="en">
+<meta name="citation_language" content="pt">
 <meta name="citation_reference" content="citation_title=Accessibility evaluation of land-use and transport strategies: Review and research directions;,citation_author=Karst Geurs;,citation_author=Bert Wee;,citation_publication_date=2004-06;,citation_cover_date=2004-06;,citation_year=2004;,citation_issue=2;,citation_doi=10.1016/j.jtrangeo.2003.10.005;,citation_issn=09666923;,citation_volume=12;,citation_language=en-US;,citation_journal_title=Journal of Transport Geography;">
 <meta name="citation_reference" content="citation_title=Calculating place-based transit accessibility: Methods, tools and algorithmic dependence;,citation_author=Christopher Higgins;,citation_author=Matthew Palm;,citation_author=Amber DeJohn;,citation_author=Luna Xi;,citation_author=James Vaughan;,citation_author=Steven Farber;,citation_author=Michael Widener;,citation_author=Eric Miller;,citation_publication_date=2022-02;,citation_cover_date=2022-02;,citation_year=2022;,citation_issue=1;,citation_doi=10.5198/jtlu.2022.2012;,citation_issn=1938-7849;,citation_volume=15;,citation_journal_title=Journal of Transport and Land Use;">
 <meta name="citation_reference" content="citation_title=From mobility to accessibility: Transforming urban transportation and land-use planning;,citation_author=Jonathan Levine;,citation_author=Joe Grengs;,citation_author=Louis A. Merlin;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;">
@@ -162,13 +162,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.3_equity_measures.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.3_equity_measures.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -180,19 +180,19 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Um Curso Prático Sobre Acessibilidade Urbana em R</a> 
+      <a href="./">Um Curso Prático de Acessibilidade Urbana em R</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Github" class="quarto-navigation-tool px-1" aria-label="Github"><i class="bi bi-github"></i></a>
     <a href="https://x.com/UrbanDemog" title="twitter" class="quarto-navigation-tool px-1" aria-label="twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://www.linkedin.com/in/rafael-h-m-pereira/" title="linkedin" class="quarto-navigation-tool px-1" aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -206,8 +206,8 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">2. Getting started</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">2. Primeiros passos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -230,7 +230,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">3. Calculando acessibilidade</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -244,13 +244,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3.2_flexible_approach.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3.3_equity_measures.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,17 +262,17 @@ div.csl-indent {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Índice</h2>
   <ul>
-  <li><a href="#inequality-measures" id="toc-inequality-measures" class="nav-link active" data-scroll-target="#inequality-measures"><span class="header-section-number">7</span> Inequality measures</a>
+  <li><a href="#medidas-de-desigualdade" id="toc-medidas-de-desigualdade" class="nav-link active" data-scroll-target="#medidas-de-desigualdade"><span class="header-section-number">7</span> Medidas de desigualdade</a>
   <ul class="collapse">
-  <li><a href="#palma-ratio" id="toc-palma-ratio" class="nav-link" data-scroll-target="#palma-ratio"><span class="header-section-number">7.1</span> Palma ratio</a></li>
-  <li><a href="#concentration-index" id="toc-concentration-index" class="nav-link" data-scroll-target="#concentration-index"><span class="header-section-number">7.2</span> Concentration index</a></li>
-  <li><a href="#gini-index" id="toc-gini-index" class="nav-link" data-scroll-target="#gini-index"><span class="header-section-number">7.3</span> <del>Gini index</del></a></li>
+  <li><a href="#razão-de-palma" id="toc-razão-de-palma" class="nav-link" data-scroll-target="#razão-de-palma"><span class="header-section-number">7.1</span> Razão de Palma</a></li>
+  <li><a href="#índice-de-gini" id="toc-índice-de-gini" class="nav-link" data-scroll-target="#índice-de-gini"><span class="header-section-number">7.2</span> <del>Índice de Gini</del></a></li>
+  <li><a href="#índice-de-concentração" id="toc-índice-de-concentração" class="nav-link" data-scroll-target="#índice-de-concentração"><span class="header-section-number">7.3</span> Índice de concentração</a></li>
   </ul></li>
-  <li><a href="#accessibility-poverty" id="toc-accessibility-poverty" class="nav-link" data-scroll-target="#accessibility-poverty"><span class="header-section-number">8</span> Accessibility poverty</a>
+  <li><a href="#medidas-de-pobreza" id="toc-medidas-de-pobreza" class="nav-link" data-scroll-target="#medidas-de-pobreza"><span class="header-section-number">8</span> Medidas de pobreza</a>
   <ul class="collapse">
-  <li><a href="#foster-greer-thorbecke-fgt-poverty-measures" id="toc-foster-greer-thorbecke-fgt-poverty-measures" class="nav-link" data-scroll-target="#foster-greer-thorbecke-fgt-poverty-measures"><span class="header-section-number">8.1</span> Foster-Greer-Thorbecke (FGT) poverty measures</a></li>
+  <li><a href="#medidas-de-pobreza-foster-greer-thorbecke-fgt" id="toc-medidas-de-pobreza-foster-greer-thorbecke-fgt" class="nav-link" data-scroll-target="#medidas-de-pobreza-foster-greer-thorbecke-fgt"><span class="header-section-number">8.1</span> Medidas de pobreza Foster-Greer-Thorbecke (FGT)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -281,22 +281,22 @@ div.csl-indent {
 <div class="quarto-about-solana column-body">
   <div class="about-entity">
     <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.3_equity_measures.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></a></li></ol></nav>
+      <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3.1_quick_approach.html">3. Calculando acessibilidade</a></li><li class="breadcrumb-item"><a href="./3.3_equity_measures.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equity measures</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Medidas de equidade</span></h1>
 </div>
 <div class="quarto-title-meta">
   </div>
 </header> 
       <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<p>A central question in transportation research and practice involves assessing how the accessibility benefits of transportation systems and projects are distributed across different socioeconomic and demographic groups. Transportation equity concerns are fundamentally related to two types of issues: (1) accessibility inequality and (2) accessibility poverty. <strong>In this section you will learn how to use the <code>{accessibility}</code> package to calculate different indicators of accessibility inequality and poverty.</strong> <img align="right" src="./images/accessibility_logo.png?raw=true" alt="logo" width="140"></p>
-<p>In a recent paper, we discussed the advantages and disadvantages of various inequality and poverty metrics most commonly used in the transport literature <span class="citation" data-cites="karner2024advances">(<a href="#ref-karner2024advances" role="doc-biblioref">Karner, Pereira, and Farber 2024</a>)</span> - ungated PDF <a href="https://www.urbandemographics.org/publication/2024_transp_measuring_transportation_equity/">here</a>. The slides below give a <em>very</em> short summary of some ideas discussed in the paper. Just enough to follow this workshop section. Nonetheless, I would strongly recommend reading the whole paper.</p>
+<p>Uma questão central na pesquisa e prática em transporte envolve avaliar como os benefícios de acessibilidade dos sistemas e projetos de transporte são distribuídos entre diferentes grupos socioeconômicos e demográficos. As preocupações com a equidade no transporte estão fundamentalmente relacionadas a dois tipos de questões: (1) desigualdade de acessibilidade e (2) pobreza de acessibilidade. <strong>Nesta seção, você aprenderá a usar o pacote <code>{accessibility}</code> para calcular diferentes indicadores de desigualdade e pobreza de acessibilidade.</strong> <img align="right" src="./images/accessibility_logo.png?raw=true" alt="logo" width="140"></p>
+<p>Em um artigo recente, discutimos as vantagens e desvantagens de várias métricas de desigualdade e pobreza mais comumente usadas na literatura de transporte <span class="citation" data-cites="karner2024advances">(<a href="#ref-karner2024advances" role="doc-biblioref">Karner, Pereira, e Farber 2024</a>)</span> - PDF aberto <a href="https://www.urbandemographics.org/publication/2024_transp_measuring_transportation_equity/">aqui</a>. Os slides abaixo fornecem um <em>resumo muito breve</em> de algumas ideias discutidas no artigo, apenas o suficiente para acompanhar esta seção do workshop. No entanto, recomendo fortemente a leitura completa do artigo.</p>
 <!-- Slides -->
 <p>
 <embed src="slides/3.3_equity_metrics.pdf" style="width:100.0%;height:100vh;">
 </p>
-<p>In this section, we’ll be using a couple sample data sets for the city of Belo Horizonte (Brazil), which come with the <code>{accessibility}</code> package. In the code chunk below, we read the travel time matrix and land use data, and calculate the average number of jobs accessible in 30 by public transport.</p>
+<p>Nesta seção, usaremos alguns conjuntos de dados de exemplo para a cidade de Belo Horizonte (Brasil), que acompanham o pacote <code>{accessibility}</code>. No bloco de código abaixo, lemos a matriz de tempo de viagem e os dados de uso do solo e calculamos o número médio de empregos acessíveis em 30 minutos por transporte público.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(accessibility)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -318,7 +318,7 @@ div.csl-indent {
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">cutoff =</span> <span class="dv">30</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(access_df)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                id  jobs
             &lt;char&gt; &lt;int&gt;
@@ -330,7 +330,7 @@ div.csl-indent {
 6: 89a881a5b03ffff 37029</code></pre>
 </div>
 </div>
-<p><span class="emoji" data-emoji="mag_right">🔎</span> Time for a quick visual inspection! We can merge our accessibility results with the land use/population data, and visualize how employment accessibility is distributed across different income groups.</p>
+<p><span class="emoji" data-emoji="mag_right">🔎</span> Hora de uma inspeção visual rápida! Podemos unir nossos resultados de acessibilidade com os dados de uso do solo/população e visualizar como a acessibilidade ao emprego é distribuída entre diferentes grupos de renda.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># merge acces and land use data</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> access_df <span class="sc">|&gt;</span></span>
@@ -348,12 +348,12 @@ div.csl-indent {
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">weight =</span> population, </span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color =</span> income_decile)) <span class="sc">+</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">'RdBu'</span>) <span class="sc">+</span> </span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Number of jobs accessible in 30 minutes by public transport'</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">'Income decile'</span>, <span class="at">y =</span> <span class="st">'Jobs (in thousands)'</span>) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"D1</span><span class="sc">\n</span><span class="st">poorest"</span>, </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Número de empregos acessíveis em 30 minutos por transporte público'</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">'Decis de renda'</span>, <span class="at">y =</span> <span class="st">'Empregos (em milhares)'</span>) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"D1</span><span class="sc">\n</span><span class="st">pobres"</span>, </span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                              <span class="fu">paste0</span>(<span class="st">"D"</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">9</span>), </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"D10</span><span class="sc">\n</span><span class="st">wealthiest"</span>)) <span class="sc">+</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"D10</span><span class="sc">\n</span><span class="st">ricos"</span>)) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Computation failed in `stat_boxplot()`.
 Caused by error in `loadNamespace()`:
@@ -367,23 +367,23 @@ Caused by error in `loadNamespace()`:
 </div>
 </div>
 </div>
-<p>The box plot shows a very uneven distribution of access to job opportunities. Now let’s check what we can learn about accessibility inequality and poverty in this region with a few examples.</p>
+<p>O box plot mostra uma distribuição muito desigual de acesso a oportunidades de emprego. Agora vamos ver o que podemos aprender sobre desigualdade e pobreza de acessibilidade nesta região com alguns indicadores</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>A detailed explanation of all inequality and poverty measures covered in <code>{accessibility}</code> are available in the <a href="https://ipeagit.github.io/accessibility/articles/inequality_and_poverty.html">package documentation</a>.</p>
+<p>Uma explicação detalhada de todas as medidas de desigualdade e pobreza abordadas no <code>{accessibility}</code> está disponível na <a href="https://ipeagit.github.io/accessibility/articles/inequality_and_poverty.html">documentação do pacote</a>.</p>
 </div>
 </div>
 </div>
-<section id="inequality-measures" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Inequality measures</h1>
-<section id="palma-ratio" class="level2" data-number="7.1">
-<h2 data-number="7.1" data-anchor-id="palma-ratio"><span class="header-section-number">7.1</span> Palma ratio</h2>
-<p>The Palma ratio is calculated as the average access of the richest 10% divided by the average access of the poorest 40%. Palma Ratio values higher than 1 indicate that the wealthiest population has higher accessibility levels than the poorest, whereas values lower than 1 indicate the opposite situation.</p>
-<p>In the example here, we see that the wealthiest population can access on average 3.8 times more jobs than the poor population.</p>
+<section id="medidas-de-desigualdade" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Medidas de desigualdade</h1>
+<section id="razão-de-palma" class="level2" data-number="7.1">
+<h2 data-number="7.1" data-anchor-id="razão-de-palma"><span class="header-section-number">7.1</span> Razão de Palma</h2>
+<p>A razão de Palma é calculada como a acessibilidade média dos 10% mais ricos dividida pela acessibilidade média dos 40% mais pobres. Valores do Índice de Palma maiores que 1 indicam que a população mais rica tem níveis de acessibilidade mais altos do que a população mais pobre, enquanto valores menores que 1 indicam a situação oposta.</p>
+<p>No exemplo aqui, vemos que a população mais rica pode acessar, em média, 3,8 vezes mais empregos do que a população pobre.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>palma <span class="ot">&lt;-</span> <span class="fu">palma_ratio</span>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">accessibility_data =</span> access_df,</span>
@@ -393,7 +393,7 @@ Caused by error in `loadNamespace()`:
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">income =</span> <span class="st">"income_per_capita"</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>palma</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>palma</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   palma_ratio
          &lt;num&gt;
@@ -401,9 +401,13 @@ Caused by error in `loadNamespace()`:
 </div>
 </div>
 </section>
-<section id="concentration-index" class="level2" data-number="7.2">
-<h2 data-number="7.2" data-anchor-id="concentration-index"><span class="header-section-number">7.2</span> Concentration index</h2>
-<p>The concentration index (CI) estimates the extent to which accessibility inequalities are systematically associated with individuals’ socioeconomic levels. CI values can theoretically vary between -1 and 1 (when all accessibility is concentrated in the most or in the least disadvantaged person, respectively). Negative values indicate that inequalities favor the poor, while positive values indicate a pro-rich bias.</p>
+<section id="índice-de-gini" class="level2" data-number="7.2">
+<h2 data-number="7.2" data-anchor-id="índice-de-gini"><span class="header-section-number">7.2</span> <del>Índice de Gini</del></h2>
+<p>Provavelmente, você não deveria estar usando o índice de Gini para medir desigualdade de acessibilidade ;) <span class="citation" data-cites="karner2024advances">(veja <a href="#ref-karner2024advances" role="doc-biblioref">Karner, Pereira, e Farber 2024</a>)</span>.</p>
+</section>
+<section id="índice-de-concentração" class="level2" data-number="7.3">
+<h2 data-number="7.3" data-anchor-id="índice-de-concentração"><span class="header-section-number">7.3</span> Índice de concentração</h2>
+<p>O índice de concentração (CI) estima a extensão em que as desigualdades de acessibilidade estão sistematicamente associadas aos níveis socioeconômicos dos indivíduos. Os valores do CI podem variar teoricamente entre -1 e 1 (quando toda a acessibilidade está concentrada na pessoa mais ou menos favorecida, respectivamente). Valores negativos indicam que as desigualdades favorecem os pobres, enquanto valores positivos indicam um viés pró-rico.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> accessibility<span class="sc">::</span><span class="fu">concentration_index</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">accessibility_data =</span> access_df,</span>
@@ -414,7 +418,7 @@ Caused by error in `loadNamespace()`:
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"corrected"</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>ci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>ci</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   concentration_index
                  &lt;num&gt;
@@ -422,29 +426,25 @@ Caused by error in `loadNamespace()`:
 </div>
 </div>
 </section>
-<section id="gini-index" class="level2" data-number="7.3">
-<h2 data-number="7.3" data-anchor-id="gini-index"><span class="header-section-number">7.3</span> <del>Gini index</del></h2>
-<p>You probably shouldn’t use the Gini index to measure accessibility inequality <span class="citation" data-cites="karner2024advances">(see <a href="#ref-karner2024advances" role="doc-biblioref">Karner, Pereira, and Farber 2024</a>)</span>.</p>
 </section>
-</section>
-<section id="accessibility-poverty" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Accessibility poverty</h1>
-<section id="foster-greer-thorbecke-fgt-poverty-measures" class="level2" data-number="8.1">
-<h2 data-number="8.1" data-anchor-id="foster-greer-thorbecke-fgt-poverty-measures"><span class="header-section-number">8.1</span> Foster-Greer-Thorbecke (FGT) poverty measures</h2>
-<p>The <code>fgt_poverty()</code> function calculates the FGT metrics, a family of poverty measures originally proposed by <span class="citation" data-cites="foster1984class">Foster, Greer, and Thorbecke (<a href="#ref-foster1984class" role="doc-biblioref">1984</a>)</span>, and which that can be used to capture the extent and severity of poverty within an accessibility distribution. The FGT family is composed of three measures:</p>
+<section id="medidas-de-pobreza" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Medidas de pobreza</h1>
+<section id="medidas-de-pobreza-foster-greer-thorbecke-fgt" class="level2" data-number="8.1">
+<h2 data-number="8.1" data-anchor-id="medidas-de-pobreza-foster-greer-thorbecke-fgt"><span class="header-section-number">8.1</span> Medidas de pobreza Foster-Greer-Thorbecke (FGT)</h2>
+<p>A função <code>fgt_poverty()</code> calcula as métricas FGT, uma família de medidas de pobreza originalmente proposta por <span class="citation" data-cites="foster1984class">Foster, Greer, e Thorbecke (<a href="#ref-foster1984class" role="doc-biblioref">1984</a>)</span>, e que pode ser usada para captar a extensão e a gravidade da pobreza de uma distribuição de acessibilidade. A família FGT é composta por três medidas:</p>
 <ul>
-<li>FGT0: it captures the extent of poverty as a simple headcount - i.e.&nbsp;the proportion of people below the poverty line;</li>
-<li>FGT1: also know as the “poverty gap index”, it captures the severity of poverty as the average percentage distance between the poverty line and the accessibility of individuals below the poverty line;</li>
-<li>FGT2: it simultaneously captures the extent and the severity of poverty by calculating the number of people below the poverty line weighted by the size of the accessibility shortfall relative to the poverty line.</li>
+<li>FGT0: captura a extensão da pobreza como uma simples contagem - ou seja, a proporção de pessoas abaixo da linha de pobreza;</li>
+<li>FGT1: também conhecido como “índice de gap de pobreza”, captura a gravidade da pobreza como a distância percentual média entre a linha de pobreza e a acessibilidade dos indivíduos abaixo dessa linha;</li>
+<li>FGT2: simultaneamente capta a extensão e a gravidade da pobreza, calculando o número de pessoas abaixo da linha de pobreza ponderado pelo tamanho do déficit de acessibilidade em relação à linha de pobreza.</li>
 </ul>
-<p>This function includes an additional <code>poverty_line</code> parameter, used to define the poverty line below which individuals are considered to be in accessibility poverty. For the sake of this exercise, we’ll consider the lowest 25th percentile of access as our poverty line, which in this example is approximately 23 thousand jobs.</p>
+<p>Essa função inclui um parâmetro adicional <code>poverty_line</code>, usado para definir a linha de pobreza abaixo da qual os indivíduos são considerados em situação de pobreza de acessibilidade. Para o propósito deste exercício, consideraremos o percentil mais baixo de 25% de acesso como nossa linha de pobreza, que neste exemplo é aproximadamente 23 mil empregos.</p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Quick reminder that the definition of an accessibility poverty line is ultimately a moral and political decision and not simply an empirical or technical question <span class="citation" data-cites="pereira2017distributive lucas2019measuring">(<a href="#ref-pereira2017distributive" role="doc-biblioref">Pereira, Schwanen, and Banister 2017</a>; <a href="#ref-lucas2019measuring" role="doc-biblioref">Lucas et al. 2019</a>)</span>.</p>
+<p>Lembrete rápido de que a definição de uma linha de pobreza de acessibilidade é, em última análise, uma decisão moral e política e não simplesmente uma questão empírica ou técnica <span class="citation" data-cites="pereira2017distributive lucas2019measuring">(<a href="#ref-pereira2017distributive" role="doc-biblioref">Pereira, Schwanen, e Banister 2017</a>; <a href="#ref-lucas2019measuring" role="doc-biblioref">Lucas et al. 2019</a>)</span>.</p>
 </div>
 </div>
 </div>
@@ -460,33 +460,33 @@ Caused by error in `loadNamespace()`:
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">poverty_line =</span> quant25</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>poverty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>poverty</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        FGT0       FGT1       FGT2
        &lt;num&gt;      &lt;num&gt;      &lt;num&gt;
 1: 0.1478675 0.04948043 0.02862334</code></pre>
 </div>
 </div>
-<p>Quick interpretation:</p>
+<p>Interpretação rápida:</p>
 <ul>
-<li>FGT0: 14.8% of the population are in accessibility poverty</li>
-<li>FGT1: the accessibility of those living in accessibility poverty is on average 5% lower than the poverty line</li>
-<li>FGT2: it has no clear interpretation, but one could say that the overall poverty level/intensity is 2.8%.</li>
+<li>FGT0: 14,8% da população está em situação de pobreza de acessibilidade</li>
+<li>FGT1: a acessibilidade daqueles em situação de pobreza de acessibilidade é, em média, 5% menor que a linha de pobreza</li>
+<li>FGT2: não possui uma interpretação direta, mas pode-se dizer que o nível/intensidade geral de pobreza é de 2,8%.</li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-foster1984class" class="csl-entry" role="listitem">
-Foster, James, Joel Greer, and Erik Thorbecke. 1984. <span>“A <span>Class</span> of <span>Decomposable Poverty Measures</span>.”</span> <em>Econometrica</em> 52 (3): 761–66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
+Foster, James, Joel Greer, e Erik Thorbecke. 1984. <span>«A <span>Class</span> of <span>Decomposable Poverty Measures</span>»</span>. <em>Econometrica</em> 52 (3): 761–66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
 </div>
 <div id="ref-karner2024advances" class="csl-entry" role="listitem">
-Karner, Alex, Rafael H. M. Pereira, and Steven Farber. 2024. <span>“Advances and Pitfalls in Measuring Transportation Equity.”</span> <em>Transportation</em>, January. <a href="https://doi.org/10.1007/s11116-023-10460-7">https://doi.org/10.1007/s11116-023-10460-7</a>.
+Karner, Alex, Rafael H. M. Pereira, e Steven Farber. 2024. <span>«Advances and Pitfalls in Measuring Transportation Equity»</span>. <em>Transportation</em>, janeiro. <a href="https://doi.org/10.1007/s11116-023-10460-7">https://doi.org/10.1007/s11116-023-10460-7</a>.
 </div>
 <div id="ref-lucas2019measuring" class="csl-entry" role="listitem">
-Lucas, Karen, Karel Martens, Floridea Di Ciommo, and Ariane Dupont-Kieffer. 2019. <em>Measuring Transport Equity</em>. Elsevier.
+Lucas, Karen, Karel Martens, Floridea Di Ciommo, e Ariane Dupont-Kieffer. 2019. <em>Measuring transport equity</em>. Elsevier.
 </div>
 <div id="ref-pereira2017distributive" class="csl-entry" role="listitem">
-Pereira, Rafael H. M., Tim Schwanen, and David Banister. 2017. <span>“Distributive Justice and Equity in Transportation.”</span> <em>Transport Reviews</em> 37 (2): 170–91. <a href="https://doi.org/10.1080/01441647.2016.1257660">https://doi.org/10.1080/01441647.2016.1257660</a>.
+Pereira, Rafael H. M., Tim Schwanen, e David Banister. 2017. <span>«Distributive Justice and Equity in Transportation»</span>. <em>Transport Reviews</em> 37 (2): 170–91. <a href="https://doi.org/10.1080/01441647.2016.1257660">https://doi.org/10.1080/01441647.2016.1257660</a>.
 </div>
 </div>
 </section>
@@ -676,12 +676,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1094,8 +1094,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./3.2_flexible_approach.html" class="pagination-link" aria-label="Aborgadem flexivel">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aborgadem flexivel</span></span>
+      <a href="./3.2_flexible_approach.html" class="pagination-link" aria-label="Abordagem flexível">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Abordagem flexível</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -15,9 +15,10 @@ about:
 execute:
   freeze: auto
 
-lang: en
+lang: pt
 book:
-  title: "Um Curso Prático Sobre Acessibilidade Urbana em R"
+  title: "Um Curso Prático de Acessibilidade Urbana em R"
+  language: pt
   author: 
   - name: "Rafael H. M. Pereira"
     email: rafael.pereira@ipea.gov.br
@@ -26,7 +27,7 @@ book:
     affiliation: "Instituto de Pesquisa Econômica Aplicada (Ipea)"
   chapters:
     - index.qmd
-    - part: "2. Getting started"
+    - part: "2. Primeiros passos"
       chapters:
         - 2.1_installation.qmd
         - 2.2_data_requirements.qmd

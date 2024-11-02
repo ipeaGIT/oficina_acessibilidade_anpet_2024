@@ -15,7 +15,7 @@ Os dados que usaremos nesta oficina são fornecidos junto com os código do curs
 
 ## Rede viária
 
-- **Rede viária** (mandatory):
+- **Rede viária** (obrigatório):
   - [{osmextract}](https://docs.ropensci.org/osmextract/), pacaote de R;
   - [Geofabrik](https://download.geofabrik.de/), website;
   - [HOT Export Tool](https://export.hotosm.org/), website;
