@@ -27,16 +27,20 @@ book:
     affiliation: "Instituto de Pesquisa Econômica Aplicada (Ipea)"
   chapters:
     - index.qmd
-    - part: "2. Primeiros passos"
+    - part: "Primeiros passos"
       chapters:
         - 2.1_installation.qmd
         - 2.2_data_requirements.qmd
-    - part: "3. Calculando acessibilidade"
+    - part: "Calculando acessibilidade"
       chapters:
         - 3.1_quick_approach.qmd
         - 3.2_flexible_approach.qmd
         - 3.3_equity_measures.qmd
-
+    - part: "Dados do Projeto Acesso a Oportunidades"
+      chapters:
+        - 4_aopdata_acessibilidade.qmd
+    - references.qmd
+    
   site-url: https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/
   repo-url: https://github.com/ipeaGIT/oficina_acessibilidade_anpet_2024
   favicon: /images/favicon.png

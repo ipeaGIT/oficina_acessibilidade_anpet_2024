@@ -11,7 +11,7 @@ code-annotations: hover
 
 Aqui, nós vamos calcular o número de escolas acessíveis por transporte público em um tempo de viagem de até 20 minutos.
 
-### Alocando memória para o Java e carregando pacotes
+- **Alocando memória para o Java e carregando pacotes**
 
 Primeiro, vamos aumentar a memória disponível para executar o Java, que é usado pelo programa roteamento R5. Para aumentar a memória disponível para 4 GB, por exemplo, usamos o seguinte comando. Observe que isso precisa ser executado ***antes*** de carregar os pacotes que serão usados em nossa análise.
 

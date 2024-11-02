@@ -28,6 +28,7 @@ O workshop utiliza alguns pacotes em R que precisam ser instalados em sua máqui
 pkgs <- c(
   'r5r',
   'accessibility',
+  'aopdata',
   'rJavaEnv',
   'ggplot2',
   'mapview',
