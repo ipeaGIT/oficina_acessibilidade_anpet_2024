@@ -1,3 +1,1 @@
-Repository with the code to develop the website used in the Workshop **"A crash course on urban accessibility with R"**, conducted during the [2024 WSTLUR](https://evento.uniandes.edu.co/en/wstlur-2024/Home/).
-
-[Website](https://ipeagit.github.io/access_workshop_bogota_2024/).
+Repo da oficina ["Um Curso Prático de Acessibilidade Urbana em R"](https://ipeagit.github.io/oficina_acessibilidade_anpet_2024/) da ANPET 2024
